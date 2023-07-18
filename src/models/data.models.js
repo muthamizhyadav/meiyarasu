@@ -1,0 +1,32 @@
+const mongoose = require('mongoose');
+const { v4 } = require('uuid');
+
+const DataSchema = new mongoose.Schema(
+  {
+    _id: {
+      type: 'string',
+      default: v4,
+    },
+    videoId: {
+      type: 'String',
+    },
+    WorkOutName: {
+      type: 'String',
+    },
+    BodyPart: {
+      type: 'String',
+    },
+    Description: {
+      type: 'String',
+    },
+    active: {
+      type: 'Boolean',
+      default: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const Data = mongoose.model('Data', DataSchema);
+
+module.exports = { Data };
