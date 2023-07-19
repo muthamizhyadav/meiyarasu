@@ -20,8 +20,12 @@ const DataSchema = new mongoose.Schema(
       type: 'String',
     },
     active: {
-      type: 'Boolean',
+      type: Boolean,
       default: true,
+    },
+    Type: {
+      type: 'String',
+      default: 'Calf',
     },
   },
   { timestamps: true }
