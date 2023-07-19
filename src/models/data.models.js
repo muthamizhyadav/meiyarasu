@@ -25,7 +25,9 @@ const DataSchema = new mongoose.Schema(
     },
     Type: {
       type: 'String',
-      default: 'Calf',
+    },
+    videoURL: {
+      type: 'String',
     },
   },
   { timestamps: true }
