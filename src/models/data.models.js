@@ -29,6 +29,9 @@ const DataSchema = new mongoose.Schema(
     videoURL: {
       type: 'String',
     },
+    ImageUrl: {
+      type: 'String',
+    },
   },
   { timestamps: true }
 );

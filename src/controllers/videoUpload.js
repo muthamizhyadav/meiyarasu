@@ -19,8 +19,20 @@ const getAllData = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send(data);
 });
 
+const Upload_Image = catchAsync(async (req, res) => {
+  const data = await UploadService.Upload_Image(req);
+  res.status(httpStatus.CREATED).send(data);
+});
+
+const createNewData = catchAsync(async (req, res) => {
+  const data = await UploadService.createNewData(req.body);
+  res.status(httpStatus.CREATED).send(data);
+});
+
 module.exports = {
   Upload_Videos,
   contentUpload,
   getAllData,
+  Upload_Image,
+  createNewData,
 };
