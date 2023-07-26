@@ -25,6 +25,8 @@ const DataSchema = new mongoose.Schema(
     },
     Type: {
       type: 'String',
+      default: 'Buttocks',
+      lowercase: true,
     },
     videoURL: {
       type: 'String',
