@@ -124,10 +124,20 @@ const createNewData = async (data) => {
   return creation;
 };
 
+const updateDataById = async (id, body) => {
+  let values = await Data.findById(id);
+  if (!values) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Not Found OR Icorrect Id');
+  }
+  values = await Data.findByIdAndUpdate({ _id: id }, body, { new: true });
+  return values;
+};
+
 module.exports = {
   Upload_Videos,
   contentUpload,
   getAllData,
   Upload_Image,
   createNewData,
+  updateDataById,
 };

@@ -8,4 +8,5 @@ router.route('/content').get(videoUploadController.contentUpload);
 router.route('/get/All').get(videoUploadController.getAllData);
 router.route('/image/upload/:id').post(ImageMiddleware, videoUploadController.Upload_Image);
 router.route('/').post(videoUploadController.createNewData);
+router.route('/updateDataById/:id').put(videoUploadController.updateDataById);
 module.exports = router;

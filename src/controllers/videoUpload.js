@@ -29,10 +29,16 @@ const createNewData = catchAsync(async (req, res) => {
   res.status(httpStatus.CREATED).send(data);
 });
 
+const updateDataById = catchAsync(async (req, res) => {
+  const data = await UploadService.updateDataById(req.params.id, req.body);
+  res.send(data);
+});
+
 module.exports = {
   Upload_Videos,
   contentUpload,
   getAllData,
   Upload_Image,
   createNewData,
+  updateDataById,
 };
