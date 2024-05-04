@@ -22,6 +22,9 @@ const DataSchema = new mongoose.Schema(
     Tamil_Description: {
       type: 'String',
     },
+    hindi_Description:{
+      type:String,
+    },
     active: {
       type: Boolean,
       default: true,
