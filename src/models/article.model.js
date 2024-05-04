@@ -13,6 +13,11 @@ const ArticleSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    Tamil_Description: {
+      type: String,
+    },  hindi_Description: {
+      type: String,
+    },
     ImageUrl: {
       type: String,
     },
