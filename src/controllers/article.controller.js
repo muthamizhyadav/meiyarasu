@@ -17,8 +17,20 @@ const getAllArticle = catchAsync(async (req, res) => {
   res.send(data);
 });
 
+const updateArticleById = catchAsync(async (req, res) => {
+  const data = await ArticleService.updateArticleById(req);
+  res.send(data);
+});
+
+const DeleteArticle = catchAsync(async (req, res) => {
+  const data = await ArticleService.DeleteArticle(req);
+  res.send(data);
+});
+
 module.exports = {
   createArticle,
   imageUpload,
   getAllArticle,
+  updateArticleById,
+  DeleteArticle,
 };

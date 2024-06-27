@@ -19,11 +19,14 @@ const DataSchema = new mongoose.Schema(
     Description: {
       type: 'String',
     },
-    Tamil_Description: {
-      type: 'String',
+    tamilTitle: {
+      type: String,
     },
-    hindi_Description:{
-      type:String,
+    Tamil_Description: {
+      type: String,
+    },
+    hindi_Description: {
+      type: String,
     },
     active: {
       type: Boolean,
